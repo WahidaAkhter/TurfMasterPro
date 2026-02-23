@@ -1,0 +1,53 @@
+# ── Build Output ────────────────────────────────────────────
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+# ── Compiled Files ──────────────────────────────────────────
+*.class
+*.jar
+*.war
+*.ear
+bin/
+
+# ── Logs ────────────────────────────────────────────────────
+*.log
+hs_err_pid*
+replay_pid*
+
+# ── STS / Eclipse ───────────────────────────────────────────
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings/
+.springBeans
+.sts4-cache
+
+# ── IntelliJ IDEA ──────────────────────────────────────────
+.idea/
+*.iws
+*.iml
+*.ipr
+out/
+
+# ── NetBeans ────────────────────────────────────────────────
+/nbproject/private/
+/nbbuild/
+/nbdist/
+/.nb-gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+# ── VS Code ─────────────────────────────────────────────────
+.vscode/
+
+# ── OS Files ────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── Environment ─────────────────────────────────────────────
+.env
