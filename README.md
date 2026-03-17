@@ -64,6 +64,9 @@
 ### Home Page (Carousel & Slots)
 ![Home Page](TurfMasterPro-main/public/images/screenshot_home.png)
 
+### Time Slot Selection
+![Time Slots](TurfMasterPro-main/public/images/screenshot_slots.png)
+
 ### User Dashboard (After Login)
 ![User Dashboard](TurfMasterPro-main/public/images/screenshot_login.png)
 
