@@ -18,20 +18,26 @@
 
 ---
 
-## 📖 Table of Contents
+## 🎯 Quick Navigation
 
-- [Overview](#-overview)
-- [Tech Stack](#-tech-stack)
-- [Architecture](#-architecture)
-- [Project Structure](#-project-structure)
-- [Prerequisites](#-prerequisites)
-- [Getting Started](#-getting-started)
-- [API Endpoints](#-api-endpoints)
-- [Frontend Routes](#-frontend-routes)
-- [Database](#-database)
-- [Screenshots](#-screenshots)
-- [Contributing](#-contributing)
-- [License](#-license)
+<table width="100%">
+  <tr>
+    <td width="50%">
+      <a href="#-overview">🌟 Overview</a><br>
+      <a href="#-screenshots">📸 Screenshots</a><br>
+      <a href="#-tech-stack">🛠️ Tech Stack</a><br>
+      <a href="#-architecture">🏗️ Architecture</a><br>
+      <a href="#-project-structure">📁 Project Structure</a>
+    </td>
+    <td width="50%">
+      <a href="#-getting-started">🚀 Getting Started</a><br>
+      <a href="#-api-endpoints">📡 API Endpoints</a><br>
+      <a href="#-frontend-routes">🗺️ Frontend Routes</a><br>
+      <a href="#-contributing">🤝 Contributing</a><br>
+      <a href="#-license">📄 License</a>
+    </td>
+  </tr>
+</table>
 
 ---
 
@@ -50,6 +56,16 @@
 | 🎠 **Dynamic Carousel** | Configurable hero carousel with images and descriptions |
 | 📱 **Responsive UI** | Mobile-first design with Tailwind CSS |
 | 📄 **Booking Confirmations** | View and manage booking receipts |
+
+---
+
+## 📸 Screenshots
+
+### Home Page (Carousel & Slots)
+![Home Page](TurfMasterPro-main/public/images/screenshot_home.png)
+
+### User Dashboard (After Login)
+![User Dashboard](TurfMasterPro-main/public/images/screenshot_login.png)
 
 ---
 
@@ -359,15 +375,6 @@ To switch to MySQL:
 
 ---
 
-## 📸 Screenshots
-
-### Home Page (Carousel & Slots)
-![Home Page](TurfMasterPro-main/public/images/screenshot_home.png)
-
-### User Dashboard (After Login)
-![User Dashboard](TurfMasterPro-main/public/images/screenshot_login.png)
-
----
 
 ## 🤝 Contributing
 
