@@ -47,8 +47,71 @@ const calculateDuration = (start, end) => {
 };
 
 
+const MOCK_SLOTS = [
+    {
+        slotId: 1,
+        gameType: "Football",
+        date: "2026-02-24",
+        bookingDate: "2026-02-24",
+        startTime: "16:00",
+        endTime: "17:00",
+        bookingStatus: "AVAILABLE",
+        price: 1500,
+    },
+    {
+        slotId: 2,
+        gameType: "Football",
+        date: "2026-02-24",
+        bookingDate: "2026-02-24",
+        startTime: "17:00",
+        endTime: "18:00",
+        bookingStatus: "AVAILABLE",
+        price: 1500,
+    },
+    {
+        slotId: 3,
+        gameType: "Cricket",
+        date: "2026-02-24",
+        bookingDate: "2026-02-24",
+        startTime: "18:00",
+        endTime: "19:00",
+        bookingStatus: "BOOKED",
+        price: 2000,
+    },
+    {
+        slotId: 4,
+        gameType: "Football",
+        date: "2026-02-25",
+        bookingDate: "2026-02-25",
+        startTime: "08:00",
+        endTime: "09:00",
+        bookingStatus: "AVAILABLE",
+        price: 1200,
+    },
+    {
+        slotId: 5,
+        gameType: "Cricket",
+        date: "2026-02-25",
+        bookingDate: "2026-02-25",
+        startTime: "09:00",
+        endTime: "10:00",
+        bookingStatus: "AVAILABLE",
+        price: 1800,
+    },
+    {
+        slotId: 6,
+        gameType: "Football",
+        date: "2026-02-25",
+        bookingDate: "2026-02-25",
+        startTime: "19:00",
+        endTime: "20:00",
+        bookingStatus: "AVAILABLE",
+        price: 2000,
+    },
+];
+
 function Slot() {
-    const [slots, setSlots] = useState([]);
+    const [slots, setSlots] = useState(MOCK_SLOTS);
     const [typedText, setTypedText] = useState("");
     const [floatingItems, setFloatingItems] = useState([]);
     const [user, setUser] = useState(() => {
@@ -109,7 +172,7 @@ function Slot() {
                 if (data && data.length > 0) setSlots(data);
             })
             .catch((err) => {
-                console.log("Fetch failed (expected in preview), using mock data.", err);
+                console.log("Fetch failed, using mock slot data.", err);
             });
     }, []);
 

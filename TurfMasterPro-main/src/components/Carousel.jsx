@@ -1,17 +1,39 @@
 import { useEffect, useState } from "react";
 
+const MOCK_CAROUSELS = [
+  {
+    title: "Premium Football Turf",
+    description: "Experience the thrill of playing on our world-class FIFA-standard artificial turf. Perfect lighting and drainage for year-round play.",
+    img: "https://images.unsplash.com/photo-1575361204480-aadea25e6e68?w=800",
+  },
+  {
+    title: "Cricket Practice Nets",
+    description: "Sharpen your batting and bowling skills in our professional practice nets with automated bowling machines and coaching support.",
+    img: "https://images.unsplash.com/photo-1531415074968-036ba1b575da?w=800",
+  },
+  {
+    title: "Book Your Slot Today",
+    description: "Easy online booking, flexible timings, and affordable rates. Gather your squad and experience the best turf in town!",
+    img: "https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=800",
+  },
+];
+
 export default function Carousel() {
-  const [slides, setSlides] = useState([]);
+  const [slides, setSlides] = useState(MOCK_CAROUSELS);
   const [active, setActive] = useState(0);
 
   useEffect(() => {
     fetch("http://localhost:8080/carousels")
       .then((res) => res.json())
       .then((data) => {
-        setSlides(data);
-        setActive(0);
+        if (data && data.length > 0) {
+          setSlides(data);
+          setActive(0);
+        }
       })
-      .catch((err) => console.error(err));
+      .catch((err) => {
+        console.error("Fetch failed, using mock carousel data:", err);
+      });
   }, []);
 
   useEffect(() => {

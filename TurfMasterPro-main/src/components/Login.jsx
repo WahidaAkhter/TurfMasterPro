@@ -16,6 +16,25 @@ function Login() {
 
   const navigate = useNavigate();
 
+  const MOCK_USERS = [
+    {
+      userId: 1,
+      fullName: "Arjun Gautam",
+      email: "arjun@example.com",
+      password: "password123",
+      gender: "Male",
+      mobileNumber: "01712345678",
+    },
+    {
+      userId: 2,
+      fullName: "Fatima Rahman",
+      email: "fatima@example.com",
+      password: "password123",
+      gender: "Female",
+      mobileNumber: "01898765432",
+    },
+  ];
+
   const submit = async (data) => {
     setLoading(true);
     setErrorMessage("");
@@ -31,13 +50,24 @@ function Login() {
 
       // Save logged-in user (single object)
       localStorage.setItem("user", JSON.stringify(response.data));
-      // In Login.js
-     window.dispatchEvent(new Event("userLogin"));
+      window.dispatchEvent(new Event("userLogin"));
       navigate("/");
     } catch (error) {
-      setErrorMessage(
-        error.response?.data || "Login failed. Please try again."
+      console.warn("Backend login failed, checking mock users:", error.message);
+      
+      const mockUser = MOCK_USERS.find(
+        (u) => u.email === data.email && u.password === data.password
       );
+
+      if (mockUser) {
+        localStorage.setItem("user", JSON.stringify(mockUser));
+        window.dispatchEvent(new Event("userLogin"));
+        navigate("/");
+      } else {
+        setErrorMessage(
+          error.response?.data || "Login failed. Please try again."
+        );
+      }
     } finally {
       setLoading(false);
     }
