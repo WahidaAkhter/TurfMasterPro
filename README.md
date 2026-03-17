@@ -361,7 +361,11 @@ To switch to MySQL:
 
 ## 📸 Screenshots
 
-> *Screenshots will be added here after the UI is finalized.*
+### Home Page (Carousel & Slots)
+![Home Page](TurfMasterPro-main/public/images/screenshot_home.png)
+
+### User Dashboard (After Login)
+![User Dashboard](TurfMasterPro-main/public/images/screenshot_login.png)
 
 ---
 
